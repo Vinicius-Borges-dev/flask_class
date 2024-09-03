@@ -2,6 +2,7 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+
 @app.route("/")
 # def index():
 #     user = {'username': 'Miguel'}
@@ -15,9 +16,24 @@ app = Flask(__name__)
 #     </body>
 # </html>'''
 def index():
-    user = {'username': 'Miguel'}
-    return render_template('index.html', user=user['username'])
+    user = {"username": "Miguel"}
+    return render_template("index.html", user=user["username"])
 
 
-if __name__ == '__main__':
+@app.route("/home")
+def home():
+    return render_template("home.html", nome="John")
+
+
+@app.route("/perfil")
+def perfil():
+    users = {
+        "nome": "John",
+        "idade": 20,
+        "email": "John@email.com",
+    }
+    return render_template("perfil.html", users=users)
+
+
+if __name__ == "__main__":
     app.run(debug=True)
