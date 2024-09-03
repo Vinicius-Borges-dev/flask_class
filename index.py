@@ -36,7 +36,7 @@ def operation(operation, a, b):
         return f'Multiplicação {a * b}'
     elif operation == 'divisão':
         return f'Divisão {a / b}'
-    
+
 
 if __name__ == '__main__':
     app.run(debug=True)
