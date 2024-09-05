@@ -6,18 +6,6 @@
         <title>Document</title>
     </head>
     <body>
-        <p>{{users["nome"]}}</p>
-        <p>{{users["idade"]}}</p>
-        <p>{{users["email"]}}</p>
-
-        {% if lista %}
-            <ul>
-                {% for item in lista %}
-                    <li>{{item}}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-
         {% if logged %}
             <p>Seja bem vindo</p>
         {% else %}

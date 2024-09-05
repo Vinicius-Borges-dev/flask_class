@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Padrão{% endblock %}</title>
+</head>
+<body>
+    <p>Texto genérico</p>
+    
+    <main>
+        {% block content %}
+
+        {% endblock %}
+    </main>
+    
+    <footer style="background-color: black; color: white;">
+        <p>Texto genérico do rodapé</p>
+    </footer>
+</body>
+</html>
